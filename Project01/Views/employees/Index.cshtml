@@ -9,7 +9,9 @@
 </div>
 
 <div class="page-controlButtonContainer">
-    @Html.ActionLink(" Nuevo registro", "Create", null, null, new { @class = "btn btn-primary btn-large fa fa-trash" })
+    <!-- @Html.ActionLink(" Nuevo registro", "Create", null, null, new { @class = "btn btn-primary btn-large fa fa-trash" })-->
+    <button id="Create" class="btn btn-primary btn-large "><i class="fa fa-user-plus"> Nuevo registro</i></button>
+
 </div>
 
 <table class="table">
@@ -45,16 +47,19 @@
                 @Html.DisplayFor(modelItem => item.department.dpt_Description)
             </td>
             <td>
+
+                <button id="Edit" onclick="popup(@item.employeeid)" class="btn btn-primary btn-large"><i class="fa fa-pencil"> Modificar</i></button>
+                <button id="Details" onclick="" class="btn btn-success btn-large"><i class="fa fa-file-text"> Detalle</i></button>
+                <button id="Delete" onclick="" class="btn btn-danger btn-large"><i class="fa fa-trash"> Eliminar</i></button>
+
+                <!--
                 <button id="edit" onclick="popup(@item.employeeid)" class="btn btn-primary btn-sm">Modificar</button>
                 @Html.ActionLink("Detalle", "Details", null, new { id = item.employeeid }, new { @class = "btn btn-success btn-sm" })
-                @Html.ActionLink("Eliminar", "Delete", null, new { id = item.employeeid }, new { @class = "btn btn-danger btn-sm" })
+                @Html.ActionLink("Eliminar", "Delete", null, new { id = item.employeeid }, new { @class = "btn btn-danger btn-sm" })-->
+
             </td>
         </tr>
 
     }
 
 </table>
-
-<a class="btn btn-danger" href="#">
-    <i class="fa fa-trash"></i> Delete
-</a>

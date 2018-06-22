@@ -51,8 +51,13 @@
         @Html.AntiForgeryToken()
 
     <div class="form-actions no-color">
+
+        <button id="Delete" onclick="" class="btn btn-danger btn-large"><i class="fa fa-trash"> Eliminar</i></button>
+        <button id="Listado" onclick="Index" class="btn btn-primary btn-large"><i class="fa fa-list-ul"> Listado</i></button>
+
+        <!--
         <input type="submit" value="Delete" class="btn btn-danger btn-sm" /> |
-        @Html.ActionLink("Listado", "Index", null, null, new { @class = "btn btn-primary btn-sm" })
+        @Html.ActionLink("Listado", "Index", null, null, new { @class = "btn btn-primary btn-sm" })-->
     </div>
     }
 </div>

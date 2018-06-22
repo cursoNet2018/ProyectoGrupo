@@ -10,7 +10,8 @@
 
 
 <div class="page-controlButtonContainer">
-    @Html.ActionLink("Nuevo registro", "Create", null, new { @class = "btn btn-primary btn-large" })
+    <!--@Html.ActionLink("Nuevo registro", "Create", null, new { @class = "btn btn-primary btn-large" })-->
+    <button id="Create" class="btn btn-primary btn-large "><i class="fa fa-file"> Nuevo registro</i></button>
 </div>
 
 
@@ -30,9 +31,18 @@
                     @Html.DisplayFor(modelItem => item.dpt_Description)
                 </td>
                 <td>
+
+
+                    <button id="Edit" onclick=""class="btn btn-primary btn-large"><i class="fa fa-pencil"> Modificar</i></button>
+                    <button id="Details" onclick="" class="btn btn-success btn-large"><i class="fa fa-file-text"> Detalle</i></button>
+                    <button id="Delete" onclick="" class="btn btn-danger btn-large"><i class="fa fa-trash"> Eliminar</i></button>
+
+                    <!--
                     @Html.ActionLink("Modificar", "Edit", null, new { id = item.departmentid }, new { @class = "btn btn-primary btn-sm" }) |
-                    @Html.ActionLink("Detalle", "Details", null,  new { id = item.departmentid }, new { @class = "btn btn-success btn-sm" }) |
+                    @Html.ActionLink("Detalle", "Details", null, new { id = item.departmentid }, new { @class = "btn btn-success btn-sm" }) |
                     @Html.ActionLink("Eliminar", "Delete", null, new { id = item.departmentid }, new { @class = "btn btn-danger btn-sm" })
+                    -->
+                    
                 </td>
             </tr>
         }
